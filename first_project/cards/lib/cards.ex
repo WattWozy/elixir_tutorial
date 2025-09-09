@@ -4,4 +4,8 @@ defmodule Cards do
     ["Ace", "Two", "Three"] # creating a list
   end
 
+  def shuffle(deck) do
+    Enum.shuffle(deck) # shuffle a list
+  end
+
 end
