@@ -3,6 +3,11 @@
 Here’s a **concise but powerful Elixir cheatsheet** you can paste into your README. It highlights syntax, basics, and some expressive features so newcomers get a quick but solid overview:
 
 ---
+# first chapter:
+- setup
+- comprehensions
+- lists and tuples
+---
 
 # Elixir Cheatsheet
 
