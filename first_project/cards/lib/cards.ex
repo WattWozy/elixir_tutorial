@@ -1,9 +1,9 @@
 defmodule Cards do
-  
+
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
-    
+
     cards = for value <- values do
       for suit <- suits do
         "#{value} of #{suit}"
@@ -19,6 +19,10 @@ defmodule Cards do
 
   def contains?(deck, card) do  # the question mark is a convention for functions that return boolean values
     Enum.member?(deck, card) # check if a list contains an element
+  end
+
+  def deal(deck, hand_size) do
+    Enum.split(deck, hand_size) # split a list into two lists at a given index
   end
 
 end
