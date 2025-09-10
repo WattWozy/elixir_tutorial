@@ -25,4 +25,9 @@ defmodule Cards do
     Enum.split(deck, hand_size) # split a list into two lists at a given index
   end
 
+  def save(deck, filename) do # basically lets you write any Elixir term to a file
+    binary = :erlang.term_to_binary(deck)
+    File.write(filename, binary)
+  end
+
 end
