@@ -31,11 +31,16 @@ defmodule Cards do
   end
 
   def load(filename) do
-    {status, binary} = File.read(filename)
-    case status do
-      :ok -> :erlang.binary_to_term(binary)
-      _ -> "That file does not exist"
+    case File.read(filename) do
+      {:ok, binary} -> :erlang.binary_to_term(binary)
+      {_, _} -> "That file does not exist"
     end
+  end
+
+  def create_hand(hand_size) do # pipe operator |> takes the result of one function and passes it as the first argument to the next function
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
   end
 
 end
