@@ -23,6 +23,16 @@ defmodule Cards do
     Enum.shuffle(deck) # shuffle a list
   end
 
+  @doc """
+    Determines whether a deck contains a given card
+
+  ## Examples
+
+      iex> deck = Cards.create_deck()
+      iex> Cards.contains?(deck, "Ace of Hearts")
+      true
+
+  """
   def contains?(deck, card) do  # the question mark is a convention for functions that return boolean values
     Enum.member?(deck, card) # check if a list contains an element
   end
@@ -33,9 +43,10 @@ defmodule Cards do
 
   ## Examples
 
-      iex> {hand, deck} = Cards.deal(Cards.create_deck, 1)
+      iex> {hand, _} = Cards.deal(Cards.create_deck, 1)
       iex> hand
       ["Ace of Hearts"]
+
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size) # split a list into two lists at a given index
