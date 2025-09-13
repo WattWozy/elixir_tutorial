@@ -133,7 +133,4 @@ mix run           # run
 iex -S mix        # interactive shell with project
 ```
 
----
-
-Would you like me to **make it super compact (one-liners, fewer examples)** so it fits nicely in a repo README, or keep it **slightly expanded** (with short explanations like above) so it doubles as a quick-start tutorial?
 
